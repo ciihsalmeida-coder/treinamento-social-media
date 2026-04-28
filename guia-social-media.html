@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guia Completo — Social Media</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f7f4ef;
+  --bg2: #eee9e0;
+  --card: #ffffff;
+  --accent: #e63946;
+  --accent2: #ff6b6b;
+  --ink: #1a1a1a;
+  --ink2: #3d3d3d;
+  --muted: #888;
+  --border: #ddd8ce;
+  --teal: #2a9d8f;
+  --gold: #e9c46a;
+  --purple: #7b5ea7;
+  --green: #2d6a4f;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.7;
+}
+
+/* NAV */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--ink);
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+nav::-webkit-scrollbar { display: none; }
+
+.nav-brand {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 13px;
+  color: var(--accent);
+  white-space: nowrap;
+  padding: 18px 24px 18px 0;
+  border-right: 1px solid #333;
+  margin-right: 8px;
+  letter-spacing: 1px;
+}
+
+nav a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 18px 16px;
+  white-space: nowrap;
+  transition: color 0.2s;
+  letter-spacing: 0.5px;
+}
+nav a:hover { color: #fff; }
+
+/* HERO */
+.hero {
+  background: var(--ink);
+  padding: 80px 40px 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: 'SOCIAL MEDIA';
+  position: absolute;
+  bottom: -20px;
+  right: -10px;
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(60px, 12vw, 130px);
+  color: rgba(255,255,255,0.03);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.hero-inner { max-width: 860px; margin: 0 auto; }
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-family: 'Syne', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 4px;
+  margin-bottom: 32px;
+}
+
+.hero h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(40px, 7vw, 72px);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.0;
+  margin-bottom: 28px;
+}
+
+.hero h1 em {
+  font-style: normal;
+  color: var(--gold);
+}
+
+.hero-desc {
+  font-size: 17px;
+  color: #aaa;
+  max-width: 540px;
+  font-weight: 300;
+  margin-bottom: 48px;
+}
+
+.hero-modules {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hero-module {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #ccc;
+  font-size: 12px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+/* MAIN LAYOUT */
+.container { max-width: 860px; margin: 0 auto; padding: 0 40px; }
+
+/* MODULE INTRO */
+.module-header {
+  padding: 64px 0 40px;
+  border-bottom: 2px solid var(--ink);
+  margin-bottom: 48px;
+}
+
+.module-tag {
+  font-family: 'Syne', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.module-title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.module-desc {
+  font-size: 16px;
+  color: var(--ink2);
+  max-width: 600px;
+  font-weight: 300;
+}
+
+/* CALLOUT */
+.callout {
+  border-left: 4px solid var(--accent);
+  background: #fff5f5;
+  padding: 20px 24px;
+  border-radius: 0 8px 8px 0;
+  margin: 32px 0;
+}
+.callout.teal { border-color: var(--teal); background: #f0faf9; }
+.callout.gold { border-color: var(--gold); background: #fdf8ec; }
+.callout.purple { border-color: var(--purple); background: #f5f0fa; }
+.callout.green { border-color: var(--green); background: #f0f7f4; }
+
+.callout-label {
+  font-family: 'Syne', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  color: var(--accent);
+}
+.callout.teal .callout-label { color: var(--teal); }
+.callout.gold .callout-label { color: #b8860b; }
+.callout.purple .callout-label { color: var(--purple); }
+.callout.green .callout-label { color: var(--green); }
+
+.callout p { font-size: 15px; color: var(--ink2); }
+
+/* SECTION TITLE */
+.sec-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 40px 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.sec-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* PILLARS */
+.pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+
+.pillar {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.pillar::before {
+  content: attr(data-num);
+  position: absolute;
+  top: -10px;
+  right: 16px;
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 64px;
+  color: rgba(0,0,0,0.04);
+  line-height: 1;
+}
+
+.pillar-tag {
+  font-family: 'Syne', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.pillar h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.pillar p { font-size: 13px; color: var(--ink2); line-height: 1.6; }
+
+.pillar.featured { border-color: var(--accent); border-width: 2px; }
+.pillar.featured .pillar-tag { color: var(--accent); }
+
+/* CHECKLIST */
+.checklist { display: flex; flex-direction: column; gap: 12px; margin: 24px 0; }
+
+.chk {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px 20px;
+}
+
+.chk-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: var(--bg2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.chk-body { flex: 1; }
+.chk-title { font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+.chk-desc { font-size: 13px; color: var(--muted); line-height: 1.5; }
+
+/* STEP LIST */
+.steps { counter-reset: steps; display: flex; flex-direction: column; gap: 0; margin: 24px 0; }
+
+.step {
+  display: flex;
+  gap: 20px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+.step:last-child { border-bottom: none; }
+
+.step-num {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: #fff;
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.step-body { flex: 1; }
+.step-title { font-family: 'Syne', sans-serif; font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+.step-desc { font-size: 14px; color: var(--ink2); }
+
+/* METRICS TABLE */
+.metrics-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin: 24px 0; }
+
+.metric-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.metric-icon { font-size: 28px; margin-bottom: 10px; }
+.metric-name { font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700; margin-bottom: 6px; }
+.metric-desc { font-size: 12px; color: var(--muted); line-height: 1.5; }
+.metric-formula { font-size: 11px; background: var(--bg2); padding: 6px 10px; border-radius: 6px; margin-top: 10px; font-family: monospace; color: var(--ink2); }
+
+/* FORMAT CARDS */
+.formats { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 24px 0; }
+
+.format-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px 22px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.format-emoji { font-size: 24px; flex-shrink: 0; }
+.format-name { font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+.format-when { font-size: 12px; color: var(--teal); font-weight: 500; margin-bottom: 4px; }
+.format-desc { font-size: 12px; color: var(--muted); line-height: 1.5; }
+
+/* DONTS */
+.donts { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin: 24px 0; }
+
+.dont-card {
+  background: #fff5f5;
+  border: 1px solid #ffd0d0;
+  border-top: 3px solid var(--accent);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.dont-emoji { font-size: 24px; margin-bottom: 10px; }
+.dont-title { font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700; color: var(--accent); margin-bottom: 6px; }
+.dont-desc { font-size: 12px; color: #666; line-height: 1.5; }
+
+/* STORIES SECTION */
+.stories-tips { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 24px 0; }
+.story-tip {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+}
+.story-tip-label { font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2px; color: var(--purple); text-transform: uppercase; margin-bottom: 8px; }
+.story-tip-title { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+.story-tip-desc { font-size: 13px; color: var(--muted); line-height: 1.5; }
+
+/* BIG QUOTE */
+.big-quote {
+  background: var(--ink);
+  color: #fff;
+  border-radius: 16px;
+  padding: 48px 40px;
+  margin: 40px 0;
+  position: relative;
+}
+.big-quote::before { content: '"'; font-family: 'Syne', sans-serif; font-size: 120px; color: rgba(255,255,255,0.05); position: absolute; top: -10px; left: 24px; line-height: 1; }
+.big-quote-text { font-family: 'Syne', sans-serif; font-size: clamp(18px, 3vw, 26px); font-weight: 700; line-height: 1.3; margin-bottom: 16px; position: relative; }
+.big-quote-text span { color: var(--gold); }
+.big-quote-source { font-size: 13px; color: #777; }
+
+/* QUESTIONS */
+.questions { display: flex; flex-direction: column; gap: 10px; margin: 24px 0; }
+.question {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 18px;
+  font-size: 14px;
+  color: var(--ink2);
+}
+.question::before { content: '→'; color: var(--teal); font-weight: 700; flex-shrink: 0; }
+
+/* DIVIDER */
+.sec-divider { height: 2px; background: var(--border); margin: 64px 0 0; }
+
+/* MODULE SEPARATOR */
+.module-sep {
+  background: var(--ink);
+  height: 8px;
+}
+
+/* FOOTER */
+footer {
+  background: var(--ink);
+  color: #555;
+  padding: 40px;
+  text-align: center;
+  font-size: 13px;
+  margin-top: 80px;
+}
+footer strong { color: var(--accent); }
+
+/* TAG PILL */
+.pill {
+  display: inline-block;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink2);
+  margin: 3px 2px;
+}
+
+@media (max-width: 640px) {
+  .container { padding: 0 20px; }
+  .hero { padding: 40px 20px 60px; }
+  .pillars, .formats, .stories-tips, .donts { grid-template-columns: 1fr; }
+  .metrics-grid { grid-template-columns: 1fr 1fr; }
+  nav { padding: 0 20px; }
+  .big-quote { padding: 32px 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">SM GUIDE</div>
+  <a href="#fundamentos">Fundamentos</a>
+  <a href="#onboarding">Onboarding</a>
+  <a href="#conteudo">Conteúdo</a>
+  <a href="#stories">Stories</a>
+  <a href="#metricas">Métricas</a>
+  <a href="#relatorio">Relatório</a>
+  <a href="#mentalidade">Mentalidade</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">📱 Treinamento Interno</div>
+    <h1>Como ser uma<br><em>Social Media</em><br>de verdade.</h1>
+    <p class="hero-desc">Guia completo para quem quer ir além de criar e postar — e passar a gerenciar estrategicamente as redes dos clientes.</p>
+    <div class="hero-modules">
+      <span class="hero-module">01 · Fundamentos</span>
+      <span class="hero-module">02 · Onboarding de clientes</span>
+      <span class="hero-module">03 · Estratégia de conteúdo</span>
+      <span class="hero-module">04 · Stories</span>
+      <span class="hero-module">05 · Métricas e análise</span>
+      <span class="hero-module">06 · Relatório de resultados</span>
+      <span class="hero-module">07 · Mentalidade estratégica</span>
+    </div>
+  </div>
+</div>
+
+<div class="module-sep"></div>
+
+<!-- ==================== MÓDULO 1 ==================== -->
+<div id="fundamentos" class="container">
+  <div class="module-header">
+    <div class="module-tag">Módulo 01</div>
+    <div class="module-title">O que é gestão de redes sociais <em style="font-style:normal;color:var(--accent)">de verdade</em></div>
+    <p class="module-desc">Antes de qualquer ferramenta ou técnica, é preciso entender o que diferencia uma produtora de conteúdo de uma gestora estratégica.</p>
+  </div>
+
+  <div class="callout">
+    <div class="callout-label">⚠️ Ponto de partida</div>
+    <p><strong>Estratégia não é gerar conteúdo.</strong> Conteúdo é apenas um dos 7 pilares da gestão. Sem os outros funcionando, estamos apenas publicando — não gerenciando.</p>
+  </div>
+
+  <div class="sec-title">Os 7 Pilares</div>
+
+  <div class="pillars">
+    <div class="pillar featured" data-num="1">
+      <div class="pillar-tag">Pilar 01</div>
+      <h3>Estratégia</h3>
+      <p>Definição de objetivos, público-alvo, posicionamento de marca e escolha das plataformas. <strong>Tudo parte daqui.</strong> Cada ação precisa ter um porquê claro.</p>
+    </div>
+
+    <div class="pillar" data-num="2">
+      <div class="pillar-tag">Pilar 02</div>
+      <h3>Planejamento de Conteúdo</h3>
+      <p>Calendário editorial, pautas, formatos e frequência de publicação. Pensar antes de criar. Cada semana planejada com antecedência.</p>
+    </div>
+
+    <div class="pillar" data-num="3">
+      <div class="pillar-tag">Pilar 03</div>
+      <h3>Produção de Conteúdo</h3>
+      <p>Criação de artes, textos, vídeos e legendas. Importante — mas é <strong>só um dos pilares</strong>, não a atividade central do trabalho.</p>
+    </div>
+
+    <div class="pillar" data-num="4">
+      <div class="pillar-tag">Pilar 04</div>
+      <h3>Publicação e Gestão</h3>
+      <p>Postar nos horários estratégicos, gerenciar múltiplas contas com atenção total e garantir consistência de identidade.</p>
+    </div>
+
+    <div class="pillar" data-num="5">
+      <div class="pillar-tag">Pilar 05</div>
+      <h3>Monitoramento e Moderação</h3>
+      <p>Responder comentários e mensagens, interagir com o público e monitorar menções à marca. A presença ativa importa.</p>
+    </div>
+
+    <div class="pillar featured" data-num="6">
+      <div class="pillar-tag">Pilar 06</div>
+      <h3>Análise de Métricas</h3>
+      <p>Acompanhar resultados e <strong>saber interpretar os dados</strong>. Os números contam uma história — precisamos aprender a lê-la.</p>
+    </div>
+  </div>
+
+  <div class="pillars" style="grid-template-columns: 1fr;">
+    <div class="pillar" style="border-color: var(--teal); border-width: 2px;" data-num="7">
+      <div class="pillar-tag" style="color: var(--teal);">Pilar 07</div>
+      <h3>Otimização Contínua</h3>
+      <p>Usar os dados para ajustar a estratégia, testar formatos e melhorar continuamente. <strong>O trabalho não termina quando o post é publicado.</strong> O ciclo recomeça com análise.</p>
+    </div>
+  </div>
+
+  <div class="big-quote">
+    <div class="big-quote-text">Um erro de produção afeta <span>um post</span>. A falta de estratégia afeta <span>toda a conta</span>.</div>
+    <div class="big-quote-source">Entenda a diferença — e priorize o que realmente move o resultado.</div>
+  </div>
+
+  <div class="sec-divider"></div>
+</div>
+
+<div class="module-sep"></div>
+
+<!-- ==================== MÓDULO 2 ==================== -->
+<div id="onboarding" class="container">
+  <div class="module-header">
+    <div class="module-tag">Módulo 02</div>
+    <div class="module-title">Onboarding de um novo cliente</div>
+    <p class="module-desc">Quando um cliente entra, a primeira tarefa não é criar conteúdo. É fazer um diagnóstico completo da conta.</p>
+  </div>
+
+  <div class="callout teal">
+    <div class="callout-label">📋 Regra de ouro</div>
+    <p>Antes de postar qualquer coisa, precisamos entender <strong>onde a conta está hoje</strong> para saber para onde precisamos levá-la.</p>
+  </div>
+
+  <div class="sec-title">Checklist de diagnóstico</div>
+
+  <div class="checklist">
+    <div class="chk">
+      <div class="chk-icon">👤</div>
+      <div class="chk-body">
+        <div class="chk-title">Bio e apresentação do perfil</div>
+        <div class="chk-desc">A bio comunica claramente quem é e o que faz? Tem CTA (chamada para ação)? O link na bio está atualizado? Está otimizada para o público certo?</div>
+      </div>
+    </div>
+
+    <div class="chk">
+      <div class="chk-icon">📌</div>
+      <div class="chk-body">
+        <div class="chk-title">Destaques (Stories fixados)</div>
+        <div class="chk-desc">Existem destaques organizados? As capas têm identidade visual? O conteúdo está atualizado e é relevante para quem chega ao perfil pela primeira vez?</div>
+      </div>
+    </div>
+
+    <div class="chk">
+      <div class="chk-icon">👥</div>
+      <div class="chk-body">
+        <div class="chk-title">Quantidade e qualidade dos seguidores</div>
+        <div class="chk-desc">O número de seguidores é compatível com o engajamento? A base é qualificada ou inflada com perfis inativos/falsos? O público segue é o público certo?</div>
+      </div>
+    </div>
+
+    <div class="chk">
+      <div class="chk-icon">📊</div>
+      <div class="chk-body">
+        <div class="chk-title">Relatório de resultados anteriores</div>
+        <div class="chk-desc">Quais eram os números antes? Qual o histórico de crescimento? Sem esse dado, definimos metas no escuro. Isso guia toda a estratégia inicial.</div>
+      </div>
+    </div>
+
+    <div class="chk">
+      <div class="chk-icon">🎨</div>
+      <div class="chk-body">
+        <div class="chk-title">Identidade visual e tom de voz</div>
+        <div class="chk-desc">Existe consistência visual? O feed tem coerência? O tom de voz nas legendas e comentários é adequado ao público? Existe um guia de marca?</div>
+      </div>
+    </div>
+
+    <div class="chk">
+      <div class="chk-icon">🏆</div>
+      <div class="chk-body">
+        <div class="chk-title">Análise da concorrência</div>
+        <div class="chk-desc">Como os concorrentes estão se posicionando? O que está funcionando para eles? Quais oportunidades de diferenciação existem?</div>
+      </div>
+    </div>
+
+    <div class="chk">
+      <div class="chk-icon">🎯</div>
+      <div class="chk-body">
+        <div class="chk-title">Objetivos do cliente</div>
+        <div class="chk-desc">O que o cliente quer alcançar: mais seguidores, mais vendas, autoridade no nicho, engajamento? O objetivo precisa ser claro para definir a estratégia correta.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-title">Perguntas-chave para o briefing</div>
+
+  <div class="questions">
+    <div class="question">Qual é o seu diferencial em relação aos concorrentes?</div>
+    <div class="question">Quem é o seu cliente ideal? Qual a faixa etária, interesses, dores?</div>
+    <div class="question">Qual resultado você espera das redes sociais em 3 meses?</div>
+    <div class="question">Quais conteúdos já geraram resultado para você no passado?</div>
+    <div class="question">Existe algum conteúdo ou abordagem que você NÃO quer ver na sua conta?</div>
+    <div class="question">Você tem fotos, vídeos e materiais para alimentar o conteúdo?</div>
+  </div>
+
+  <div class="sec-divider"></div>
+</div>
+
+<div class="module-sep"></div>
+
+<!-- ==================== MÓDULO 3 ==================== -->
+<div id="conteudo" class="container">
+  <div class="module-header">
+    <div class="module-tag">Módulo 03</div>
+    <div class="module-title">Estratégia de conteúdo</div>
+    <p class="module-desc">Conteúdo estratégico não é o que você quer postar — é o que o seu público precisa ver para tomar uma ação.</p>
+  </div>
+
+  <div class="callout gold">
+    <div class="callout-label">💡 Princípio fundamental</div>
+    <p>Todo conteúdo precisa ter um <strong>objetivo</strong>: educar, engajar, entreter, inspirar ou converter. Postar "para manter o perfil ativo" não é estratégia.</p>
+  </div>
+
+  <div class="sec-title">Os 4 tipos de conteúdo</div>
+
+  <div class="pillars">
+    <div class="pillar" data-num="">
+      <div class="pillar-tag" style="color: var(--teal);">Tipo 01 · Educar</div>
+      <h3>Conteúdo Educativo</h3>
+      <p>Ensina algo ao seu público. Gera autoridade e é muito compartilhado. Ex: dicas, tutoriais, dados, curiosidades do nicho.</p>
+    </div>
+
+    <div class="pillar" data-num="">
+      <div class="pillar-tag" style="color: var(--purple);">Tipo 02 · Engajar</div>
+      <h3>Conteúdo de Engajamento</h3>
+      <p>Provoca interação: curtida, comentário, compartilhamento. Ex: perguntas, enquetes, "você concorda?", bastidores.</p>
+    </div>
+
+    <div class="pillar" data-num="">
+      <div class="pillar-tag" style="color: var(--gold); filter: brightness(0.7);">Tipo 03 · Inspirar</div>
+      <h3>Conteúdo Inspiracional</h3>
+      <p>Cria conexão emocional com a marca. Ex: história da empresa, valores, conquistas, depoimentos de clientes.</p>
+    </div>
+
+    <div class="pillar featured" data-num="">
+      <div class="pillar-tag">Tipo 04 · Converter</div>
+      <h3>Conteúdo de Conversão</h3>
+      <p>Direciona para uma ação: compra, agendamento, link, contato. Não pode ser o único tipo — mas precisa existir com consistência.</p>
+    </div>
+  </div>
+
+  <div class="sec-title">Formatos e quando usar cada um</div>
+
+  <div class="formats">
+    <div class="format-card">
+      <div class="format-emoji">🎠</div>
+      <div>
+        <div class="format-name">Carrossel</div>
+        <div class="format-when">Melhor para: educar e salvar</div>
+        <div class="format-desc">Alto tempo de visualização, favorito do algoritmo. Use para conteúdo educativo com múltiplos pontos. A primeira imagem precisa parar o scroll.</div>
+      </div>
+    </div>
+
+    <div class="format-card">
+      <div class="format-emoji">🎬</div>
+      <div>
+        <div class="format-name">Reels / Vídeo curto</div>
+        <div class="format-when">Melhor para: alcance e descoberta</div>
+        <div class="format-desc">O formato com maior alcance orgânico atualmente. Priorizado pelo algoritmo. Ideal para atingir público novo fora dos seguidores.</div>
+      </div>
+    </div>
+
+    <div class="format-card">
+      <div class="format-emoji">🖼️</div>
+      <div>
+        <div class="format-name">Imagem estática</div>
+        <div class="format-when">Melhor para: identidade visual</div>
+        <div class="format-desc">Menor alcance orgânico, mas mantém a coerência do feed. Use para posicionamento de marca, datas comemorativas e frases.</div>
+      </div>
+    </div>
+
+    <div class="format-card">
+      <div class="format-emoji">📱</div>
+      <div>
+        <div class="format-name">Stories</div>
+        <div class="format-when">Melhor para: proximidade e conversão</div>
+        <div class="format-desc">Canal mais próximo e informal. Ideal para bastidores, enquetes, CTAs diretos e manter a frequência diária de presença.</div>
+      </div>
+    </div>
+
+    <div class="format-card">
+      <div class="format-emoji">📝</div>
+      <div>
+        <div class="format-name">Post de texto (LinkedIn)</div>
+        <div class="format-when">Melhor para: autoridade e debate</div>
+        <div class="format-desc">No LinkedIn, texto bem escrito performa muito. Use para opiniões, aprendizados, reflexões do nicho e posicionamento profissional.</div>
+      </div>
+    </div>
+
+    <div class="format-card">
+      <div class="format-emoji">🔴</div>
+      <div>
+        <div class="format-name">Lives</div>
+        <div class="format-when">Melhor para: conexão e autoridade</div>
+        <div class="format-desc">Alta conexão com o público, mas exige planejamento. Use com pauta definida, convidados ou para lançamentos e eventos.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-title">Como montar um calendário editorial</div>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <div class="step-title">Defina a frequência semanal por plataforma</div>
+        <div class="step-desc">Exemplo: Instagram → 4x/semana no feed + Stories diários. LinkedIn → 3x/semana. Consistência é mais importante que volume.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <div class="step-title">Distribua os 4 tipos de conteúdo</div>
+        <div class="step-desc">Evite postar só conversão ou só entretenimento. Equilíbrio sugerido: 40% educativo, 30% engajamento, 20% inspiracional, 10% conversão.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <div class="step-title">Pesquise datas relevantes do nicho</div>
+        <div class="step-desc">Além das datas comemorativas gerais, cada nicho tem suas datas estratégicas. Mapeie com antecedência de pelo menos 1 mês.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-body">
+        <div class="step-title">Planeje com pelo menos 2 semanas de antecedência</div>
+        <div class="step-desc">Nunca crie conteúdo no dia de postar. O planejamento antecipado garante qualidade, revisão e consistência.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">5</div>
+      <div class="step-body">
+        <div class="step-title">Deixe espaço para conteúdo reativo</div>
+        <div class="step-desc">Tendências, notícias do nicho e momentos espontâneos também têm valor. Reserve 1 espaço por semana para esse tipo de conteúdo.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-divider"></div>
+</div>
+
+<div class="module-sep"></div>
+
+<!-- ==================== MÓDULO 4 ==================== -->
+<div id="stories" class="container">
+  <div class="module-header">
+    <div class="module-tag">Módulo 04</div>
+    <div class="module-title">Stories: o canal mais subestimado</div>
+    <p class="module-desc">Stories não são para repostar o feed. São o canal de maior proximidade com o público — e precisam de estratégia própria.</p>
+  </div>
+
+  <div class="callout purple">
+    <div class="callout-label">🚨 Erro muito comum</div>
+    <p>Usar os Stories apenas para repostar publicações do feed é desperdiçar o melhor canal de <strong>relacionamento e conversão</strong> das redes sociais.</p>
+  </div>
+
+  <div class="sec-title">Para que servem os Stories</div>
+
+  <div class="stories-tips">
+    <div class="story-tip">
+      <div class="story-tip-label">Presença diária</div>
+      <div class="story-tip-title">Manter o perfil ativo todos os dias</div>
+      <div class="story-tip-desc">Stories aparecem no topo do feed. Presença diária mantém a marca na memória do público sem precisar postar no feed todos os dias.</div>
+    </div>
+
+    <div class="story-tip">
+      <div class="story-tip-label">Relacionamento</div>
+      <div class="story-tip-title">Bastidores e humanização</div>
+      <div class="story-tip-desc">Mostrar o lado humano da marca, rotina, processos. Conteúdo mais informal que cria conexão real com os seguidores.</div>
+    </div>
+
+    <div class="story-tip">
+      <div class="story-tip-label">Engajamento</div>
+      <div class="story-tip-title">Enquetes, perguntas e caixinhas</div>
+      <div class="story-tip-desc">As ferramentas interativas do Stories são as mais poderosas para entender o público e aumentar o engajamento do perfil.</div>
+    </div>
+
+    <div class="story-tip">
+      <div class="story-tip-label">Conversão</div>
+      <div class="story-tip-title">CTA direto com link</div>
+      <div class="story-tip-desc">Stories com link direto são o caminho mais curto entre a rede social e a venda. Use para promoções, agendamentos e landing pages.</div>
+    </div>
+
+    <div class="story-tip">
+      <div class="story-tip-label">Prova social</div>
+      <div class="story-tip-title">Depoimentos e resultados</div>
+      <div class="story-tip-desc">Compartilhar feedbacks de clientes, resultados e conquistas gera credibilidade e influencia a decisão de compra de quem está nos Stories.</div>
+    </div>
+
+    <div class="story-tip">
+      <div class="story-tip-label">Conteúdo fixo</div>
+      <div class="story-tip-title">Destaques organizados</div>
+      <div class="story-tip-desc">Os melhores Stories viram Destaques — vitrine permanente do perfil. Precisam ser organizados por tema e ter capas com identidade visual.</div>
+    </div>
+  </div>
+
+  <div class="callout teal">
+    <div class="callout-label">📅 Frequência recomendada</div>
+    <p>Mínimo de <strong>3 a 5 Stories por dia</strong>. Não precisam ser produzidos — podem ser interativos, textuais ou de bastidores. O que importa é a <strong>consistência diária</strong>.</p>
+  </div>
+
+  <div class="sec-divider"></div>
+</div>
+
+<div class="module-sep"></div>
+
+<!-- ==================== MÓDULO 5 ==================== -->
+<div id="metricas" class="container">
+  <div class="module-header">
+    <div class="module-tag">Módulo 05</div>
+    <div class="module-title">Métricas: como ler os dados</div>
+    <p class="module-desc">Os números contam a história da conta. Saber interpretá-los é o que separa uma gestora estratégica de uma postadora de conteúdo.</p>
+  </div>
+
+  <div class="callout">
+    <div class="callout-label">⚠️ Cuidado com vaidade</div>
+    <p>Número de seguidores é uma <strong>métrica de vaidade</strong>. Sozinha, não diz nada sobre o resultado real. O que importa é o conjunto de métricas — e o que elas revelam juntas.</p>
+  </div>
+
+  <div class="sec-title">As métricas principais</div>
+
+  <div class="metrics-grid">
+    <div class="metric-card">
+      <div class="metric-icon">👁️</div>
+      <div class="metric-name">Alcance</div>
+      <div class="metric-desc">Quantas pessoas únicas viram o conteúdo. Mede a capacidade de descoberta da conta.</div>
+      <div class="metric-formula">Seguidores + Não seguidores</div>
+    </div>
+
+    <div class="metric-card">
+      <div class="metric-icon">📢</div>
+      <div class="metric-name">Impressões</div>
+      <div class="metric-desc">Total de vezes que o conteúdo foi exibido. Pode ser maior que o alcance (mesma pessoa vendo 2x).</div>
+      <div class="metric-formula">Visualizações totais</div>
+    </div>
+
+    <div class="metric-card">
+      <div class="metric-icon">💬</div>
+      <div class="metric-name">Engajamento</div>
+      <div class="metric-desc">Soma de curtidas, comentários, compartilhamentos e salvamentos. Mede a qualidade do conteúdo.</div>
+      <div class="metric-formula">Curtidas + Cmts + Comp + Salv</div>
+    </div>
+
+    <div class="metric-card">
+      <div class="metric-icon">📈</div>
+      <div class="metric-name">Taxa de Engajamento</div>
+      <div class="metric-desc">Engajamento em relação ao alcance ou seguidores. Benchmark saudável no Instagram: 2% a 5%.</div>
+      <div class="metric-formula">Engaj ÷ Alcance × 100</div>
+    </div>
+
+    <div class="metric-card">
+      <div class="metric-icon">🔖</div>
+      <div class="metric-name">Salvamentos</div>
+      <div class="metric-desc">Indica conteúdo de alto valor percebido. O algoritmo valoriza muito. Mira em carrosséis e tutoriais.</div>
+      <div class="metric-formula">Sinal mais forte de qualidade</div>
+    </div>
+
+    <div class="metric-card">
+      <div class="metric-icon">🔄</div>
+      <div class="metric-name">Compartilhamentos</div>
+      <div class="metric-desc">Quando o público distribui o conteúdo. Indica alta identificação e é o principal motor de crescimento orgânico.</div>
+      <div class="metric-formula">Crescimento orgânico real</div>
+    </div>
+
+    <div class="metric-card">
+      <div class="metric-icon">👤</div>
+      <div class="metric-name">Novos seguidores</div>
+      <div class="metric-desc">Crescimento da base. Importante acompanhar não só o número, mas a qualidade de quem chegou.</div>
+      <div class="metric-formula">Resultado de alcance + conteúdo</div>
+    </div>
+
+    <div class="metric-card">
+      <div class="metric-icon">🔗</div>
+      <div class="metric-name">Cliques no link</div>
+      <div class="metric-desc">Mede a intenção de ação real. Fundamental para contas com objetivo de vendas ou captação de leads.</div>
+      <div class="metric-formula">Conversão social → site</div>
+    </div>
+
+    <div class="metric-card">
+      <div class="metric-icon">🏠</div>
+      <div class="metric-name">Visitas ao perfil</div>
+      <div class="metric-desc">Mostra interesse gerado pelo conteúdo. Alta visita com baixa conversão em seguidor indica problema na bio.</div>
+      <div class="metric-formula">Interesse → Seguidor</div>
+    </div>
+  </div>
+
+  <div class="sec-title">Como interpretar os dados na prática</div>
+
+  <div class="questions">
+    <div class="question">Alcance cresceu mas engajamento caiu → o conteúdo está alcançando as pessoas erradas</div>
+    <div class="question">Alto alcance em não seguidores → conteúdo está sendo distribuído pelo algoritmo (ótimo sinal)</div>
+    <div class="question">Muitos salvamentos mas poucas curtidas → conteúdo muito útil, mas pouco emocional</div>
+    <div class="question">Muitas visitas ao perfil mas poucos novos seguidores → problema na bio ou no feed</div>
+    <div class="question">Taxa de engajamento alta com alcance baixo → base engajada, mas conta em bolha. Precisa de conteúdo de descoberta</div>
+    <div class="question">Crescimento de seguidores sem aumento de engajamento → seguidores não qualificados ou conteúdo sem conexão</div>
+  </div>
+
+  <div class="sec-divider"></div>
+</div>
+
+<div class="module-sep"></div>
+
+<!-- ==================== MÓDULO 6 ==================== -->
+<div id="relatorio" class="container">
+  <div class="module-header">
+    <div class="module-tag">Módulo 06</div>
+    <div class="module-title">Relatório de resultados</div>
+    <p class="module-desc">O relatório não é burocracia — é a prova do trabalho e a ferramenta que guia as próximas decisões estratégicas.</p>
+  </div>
+
+  <div class="callout green">
+    <div class="callout-label">📋 Obrigação mensal</div>
+    <p>Todo cliente precisa receber um relatório mensal de resultados. <strong>Sem relatório, não existe gestão.</strong> É ele que justifica o investimento e orienta os próximos passos.</p>
+  </div>
+
+  <div class="sec-title">O que deve constar no relatório</div>
+
+  <div class="checklist">
+    <div class="chk">
+      <div class="chk-icon">📊</div>
+      <div class="chk-body">
+        <div class="chk-title">Resumo executivo</div>
+        <div class="chk-desc">3 a 5 linhas com os principais resultados do mês. O cliente precisa entender o desempenho antes de ler os detalhes.</div>
+      </div>
+    </div>
+
+    <div class="chk">
+      <div class="chk-icon">📈</div>
+      <div class="chk-body">
+        <div class="chk-title">Evolução mês a mês</div>
+        <div class="chk-desc">Comparativo com o mês anterior: seguidores, alcance, engajamento, impressões. Mostrar crescimento ou identificar queda com justificativa.</div>
+      </div>
+    </div>
+
+    <div class="chk">
+      <div class="chk-icon">🏆</div>
+      <div class="chk-body">
+        <div class="chk-title">Top 3 conteúdos do mês</div>
+        <div class="chk-desc">Os posts com melhor desempenho e o motivo do sucesso. Isso orienta o planejamento do próximo mês.</div>
+      </div>
+    </div>
+
+    <div class="chk">
+      <div class="chk-icon">👥</div>
+      <div class="chk-body">
+        <div class="chk-title">Dados de audiência</div>
+        <div class="chk-desc">Quem está seguindo: gênero, faixa etária, localização, horários de maior atividade. Esses dados refinam a estratégia.</div>
+      </div>
+    </div>
+
+    <div class="chk">
+      <div class="chk-icon">🎯</div>
+      <div class="chk-body">
+        <div class="chk-title">Análise e recomendações</div>
+        <div class="chk-desc">O que funcionou, o que não funcionou e o que será ajustado no próximo mês. Essa parte demonstra visão estratégica.</div>
+      </div>
+    </div>
+
+    <div class="chk">
+      <div class="chk-icon">🗓️</div>
+      <div class="chk-body">
+        <div class="chk-title">Próximos passos</div>
+        <div class="chk-desc">O que está planejado para o próximo mês. Mostra proatividade e mantém o cliente alinhado com a estratégia.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-divider"></div>
+</div>
+
+<div class="module-sep"></div>
+
+<!-- ==================== MÓDULO 7 ==================== -->
+<div id="mentalidade" class="container">
+  <div class="module-header">
+    <div class="module-tag">Módulo 07</div>
+    <div class="module-title">Mentalidade estratégica</div>
+    <p class="module-desc">O que diferencia uma social media júnior de uma sênior não é a técnica — é o olhar. A forma como enxerga cada conta, cada número, cada decisão.</p>
+  </div>
+
+  <div class="big-quote">
+    <div class="big-quote-text">Quando você abre a conta de um cliente, não veja como <span>produtora de conteúdo</span>. Veja como <span>gestora de negócio</span>.</div>
+    <div class="big-quote-source">Essa mudança de perspectiva muda tudo.</div>
+  </div>
+
+  <div class="sec-title">Perguntas que toda gestora estratégica faz</div>
+
+  <div class="questions">
+    <div class="question">O perfil está crescendo ou estagnado? Por quê?</div>
+    <div class="question">O conteúdo está alcançando público novo ou só falando com quem já segue?</div>
+    <div class="question">O engajamento é compatível com o tamanho do perfil?</div>
+    <div class="question">Os Stories estão sendo usados com consistência e intenção?</div>
+    <div class="question">Existe relatório de resultados atualizado?</div>
+    <div class="question">O que os dados estão dizendo sobre o que funciona nessa conta?</div>
+    <div class="question">A bio converte quem visita o perfil em seguidor?</div>
+    <div class="question">Os destaques contam a história da marca para quem chega pela primeira vez?</div>
+    <div class="question">O objetivo do cliente está sendo alcançado com a estratégia atual?</div>
+  </div>
+
+  <div class="sec-title">O que NÃO pode acontecer</div>
+
+  <div class="donts">
+    <div class="dont-card">
+      <div class="dont-emoji">📉</div>
+      <div class="dont-title">Sem relatório</div>
+      <div class="dont-desc">Sem dados, não existe gestão. Relatório mensal é obrigação — não opcional. É a prova do trabalho e guia a estratégia.</div>
+    </div>
+
+    <div class="dont-card">
+      <div class="dont-emoji">🔁</div>
+      <div class="dont-title">Stories só repost</div>
+      <div class="dont-desc">Repostar o feed nos Stories sem estratégia desperdiça o melhor canal de relacionamento e conversão das redes sociais.</div>
+    </div>
+
+    <div class="dont-card">
+      <div class="dont-emoji">🎯</div>
+      <div class="dont-title">Postar sem objetivo</div>
+      <div class="dont-desc">Cada publicação precisa de um propósito: engajar, converter, educar, alcançar público novo. "Manter o perfil ativo" não é objetivo.</div>
+    </div>
+
+    <div class="dont-card">
+      <div class="dont-emoji">🔢</div>
+      <div class="dont-title">Ignorar métricas</div>
+      <div class="dont-desc">Não acompanhar os números é trabalhar no escuro. Os dados mostram o que funciona e o que precisa ser ajustado.</div>
+    </div>
+
+    <div class="dont-card">
+      <div class="dont-emoji">📋</div>
+      <div class="dont-title">Sem planejamento</div>
+      <div class="dont-desc">Criar conteúdo no dia de postar compromete a qualidade e quebra a consistência. Planeje sempre com antecedência.</div>
+    </div>
+
+    <div class="dont-card">
+      <div class="dont-emoji">👀</div>
+      <div class="dont-title">Não conhecer o cliente</div>
+      <div class="dont-desc">Sem entender o negócio, o público e os objetivos do cliente, qualquer conteúdo é apenas achismo.</div>
+    </div>
+  </div>
+
+  <div class="callout teal" style="margin-top: 40px;">
+    <div class="callout-label">🚀 O próximo nível</div>
+    <p>Uma social media sênior não espera o cliente perguntar o que está acontecendo. Ela <strong>antecipa</strong>, apresenta os dados, sugere ajustes e lidera a estratégia. Essa postura é o que transforma gestão em parceria.</p>
+  </div>
+
+  <div style="height: 64px;"></div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <strong>Guia Completo de Social Media</strong> · Treinamento Interno · Uso exclusivo da equipe<br><br>
+  <span style="color: #333;">Conhecimento não aplicado é só informação. Aplique.</span>
+</footer>
+
+</body>
+</html>
